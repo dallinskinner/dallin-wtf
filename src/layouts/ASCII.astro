@@ -1,0 +1,90 @@
+--- 
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<style>
+			@font-face {
+				font-family: "jgs7";
+				src: url("/fonts/jgs7.woff2") format("woff2"), url("/fonts/jgs7.woff") format("woff");
+				font-weight: normal;
+				font-style: normal;
+				font-display: swap;
+			}
+
+			@font-face {
+				font-family: "jgs5";
+				src: url("/fonts/jgs5.woff2") format("woff2"), url("/fonts/jgs5.woff") format("woff");
+				font-weight: normal;
+				font-style: normal;
+				font-display: swap;
+			}
+
+			@font-face {
+				font-family: "jgs9";
+				src: url("/fonts/jgs9.woff2") format("woff2"), url("/fonts/jgs9.woff") format("woff");
+				font-weight: normal;
+				font-style: normal;
+				font-display: swap;
+			}
+		</style>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		/* background: #2d1b00; */
+		/* background: #46425e; */
+		/* background: #151640; */
+		/* background: #280b0b; */
+		background: #000;
+    height: 100%;
+	}
+  body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+	code, pre {
+		font-family: 'Courier New', Courier, monospace;
+		letter-spacing: 0.4em;;
+		font-size: 10px;
+		text-align: center;
+	}
+	pre.jgs {
+		font-family: 'jgs5';
+		letter-spacing: unset;
+		line-height: 1;
+		font-size: 20px;
+	}
+	pre {
+		/* color: #c4f0c2; */
+		/* color: #f6c6a8; */
+		/* color: #e6f2ef; */
+		/* color: #b0ecf9; */
+		color: #fff;
+	}
+</style>

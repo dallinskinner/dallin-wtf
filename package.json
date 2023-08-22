@@ -1,0 +1,21 @@
+{
+  "name": "dallin-wtf",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.197",
+    "@types/p5": "^1.6.2",
+    "astro": "^2.10.9",
+    "fast-simplex-noise": "^4.0.0",
+    "lodash": "^4.17.21",
+    "p5": "^1.7.0",
+    "range-map": "https://github.com/dallinskinner/range-map.git#add-types"
+  }
+}
